@@ -1,0 +1,21 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Java
+*.class
+target/
+
+# Logs
+*.log
+
+# Linux temp
+*.tmp
+
+# IDE
+.vscode/
+.idea/
