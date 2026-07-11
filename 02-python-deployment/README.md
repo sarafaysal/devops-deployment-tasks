@@ -1,63 +1,85 @@
 # Python Application Deployment
 
 ## Objective
-Deploy a Python Flask application using Gunicorn and Nginx.
+
+Deploy a Python Flask application using Gunicorn and Nginx on Ubuntu (WSL2).
+
+---
 
 ## Technologies Used
+
 - Ubuntu 24.04 (WSL2)
 - Python 3.12
 - Flask
 - Gunicorn
 - Nginx
+- Git & GitHub
+
+---
+
+## Project Structure
+
+```
+02-python-deployment/
+│── employee-directory/
+│── screenshots/
+│── README.md
+```
+
+---
+
+## Deployment Steps
+
+1. Created a Python virtual environment.
+2. Installed Flask and Gunicorn.
+3. Started the Flask application using Gunicorn.
+4. Installed Nginx.
+5. Configured Nginx as a Reverse Proxy.
+6. Verified the deployment in the browser.
+
+---
 
 ## Architecture
 
+```
 Browser
-↓
+   │
+   ▼
 Nginx
-↓
+   │
+   ▼
 Gunicorn
-↓
+   │
+   ▼
 Flask Application
-
-## Commands Used
-
-Create Virtual Environment
-
-```bash
-python3 -m venv venv
 ```
 
-Activate
+---
 
-```bash
-source venv/bin/activate
-```
+## Screenshots
 
-Install Packages
+### Employee Directory
 
-```bash
-pip install flask gunicorn
-```
+![Employee Directory](screenshots/employee-directory.png)
 
-Run Gunicorn
+### Gunicorn Running
 
-```bash
-gunicorn --bind 127.0.0.1:8000 app:app
-```
+![Gunicorn](screenshots/gunicorn-running.png)
 
-Test Nginx
+### Nginx Configuration Test
 
-```bash
-sudo nginx -t
-```
+![Nginx Test](screenshots/nginx-test.png)
 
-Restart Nginx
+### Nginx Service Status
 
-```bash
-sudo service nginx restart
-```
+![Nginx Status](screenshots/nginx-status.png)
+
+### Reverse Proxy Working
+
+![Reverse Proxy](screenshots/nginx-reverse-proxy.png)
+
+---
 
 ## Result
 
-Successfully deployed the Flask application using Nginx as a reverse proxy.
+Successfully deployed a Python Flask application using Gunicorn behind Nginx as a Reverse Proxy.
